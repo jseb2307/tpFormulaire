@@ -1,0 +1,260 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+header{
+    border: 1px solid green;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+}
+
+/* ================ main prend les 2 sections ============== */
+main{
+    display: flex;
+}
+
+/* =============== HEADER =================== */
+.hidden{
+    display: none;
+}
+
+#titre{
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    width: 90%;
+    color: rgb(30, 175, 30);
+    height: 100px;
+    margin-left: 10px;
+    padding-top: 60px;
+    border-bottom: 3px solid rgb(30, 175, 30);
+    position: relative;
+}
+#logo{
+    width: 100px;
+    height: 70px;
+    margin: 15px 55px 50px 0;
+    
+}
+.infos{
+    height: 70px;
+
+}
+.align-horizontal {
+    display:flex;
+    height: 30px;
+    align-items: center;
+
+}
+
+.infos label,
+.infos input {
+    display: flex;
+    margin-bottom: 60px; 
+}
+#labelNom{
+    margin: 0 10px 0 10px;
+    font-size: large;
+    font-weight: bold;
+    color: blue;
+}
+#nom, #prenom{
+    cursor: text;
+    height: 30px;
+    background-color: rgba(236, 238, 236, 0.5);
+
+}
+#labelPrenom{
+    margin: 0 10px 0 60px;
+    font-size: large;
+    font-weight: bold;
+    color: blue;
+}
+#labelFormationSuivie{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+#formationSuivie{
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.selectionDateAbsence{
+    height:35px ;
+    padding: 5px;
+}
+#labelDateAbsence{
+    margin-left: 5px;
+    margin-right: 15px;
+    font-weight: bold;
+    color: blue;
+}
+#dateJourneeLabel{
+    font-weight: bold;
+}
+.calendrier {
+    margin-left: 10px;
+}
+#heureDebutJournee {
+    margin-left: 25px;
+    font-style: italic;
+}
+#heureFinJournee{
+    margin-left: 25px;
+    font-style: italic;
+}
+.calendrier hidden{
+    margin-left: 10px; 
+}
+#dateDebutLabel{
+    font-style: italic;
+}
+#dateFinLabel{
+    font-style: italic;
+    margin-left: 25px;
+}
+#joursAbsenceLabel{
+    margin-left: 25px;
+}
+.motifAbsence{
+background-color: rgb(223, 220, 217);
+height: 800px;
+flex:2;
+border: 1px solid green;
+border-radius: 5px;
+}
+/* ================ Section signatures ============== */
+
+.signatures{
+    height: 100%;
+    border: 1px solid green;
+    border-radius: 5px;
+    flex: 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px; 
+    z-index: -1;
+
+}
+/* ================== Cadre cachet et signature de l'entreprise ==================== */
+
+.cachetSignatureEntreprise{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+
+#cachet{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+
+#cachetEntreprise{
+    padding-top: 15px;
+    font-style: italic;
+}
+
+#signatureEntreprise{
+    font-style: italic;
+}
+
+/* ================= Cadre signatures stagiaire et formateur + Cadre avis direction ====================== */
+
+
+
+.blocSignatureStagiaireFormateur, .decisionMfDirecteur{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    
+}
+#stagiaire, #formateur, #avisMf, #avisDirecteur{
+    margin-top: 10px;
+    margin-bottom: 73px;
+    padding-left: 10px;
+}
+    
+/* ================ Section motif absence ============================== */
+#motifAbsenceTitre{
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+    padding: 15px;
+}
+.motifAbsence{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.motifAbsence h3{
+    font-weight: bold;
+    padding-left: 15px;
+    
+}
+.motifAbsence label{
+    padding-left: 35px;
+    display: block;
+    margin-bottom: 5px;
+
+}
+.motifAbsence input[type="radio"] {
+    margin-right: 8px;
+}
+.motifAbsence div {
+    margin-bottom: 10px;
+  }
+/* ================ VALIDER ================ */
+#validerButton{
+    background-color: rgb(154, 247, 154);
+}
+
+@media only screen and (max-width: 750px){
+    #labelDateAbsence{
+        display: block;
+       
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .selectionDateAbsence{
+        display: block;
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .align-horizontal{
+        height: 80px;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    #calendrierJournee{
+        display: block;
+        height: 80px;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autorisation d'Abscence</title>
+    <link rel="stylesheet" href="autorisation.css">
+</head>
+
+
+<body>
+   
+    <header classe="entete">
+        <div class="entete" id="titre">
+            <h1>Autorisation d'Absence</h1>
+           <img  id="logo" src="Couleur-logo-AFPA-500x281-537154123.jpg" alt="">
+        </div>
+        <div class="align-horizontal">
+            <label id="labelNom" for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label id="labelPrenom" for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+        </div>
+        <div> <!--  SELECT CHOIX FORMATION -->
+            <label id="labelFormationSuivie" for="formationSuivie">Formation suivie :</label>
+            <select id="formationSuivie" name="formationSuivie" required>
+                <option value="">-Liste des formations-</option>
+                <option value="CDA">CDA</option>
+                <option value="DWWM">DWWM</option>
+                <option value="TSSR">TSSR</option>
+            </select>
+        </div>
+        <div class="dateAbsence">
+            <div id="labelDateAbsence">
+                <label id="labelDateAbsence" for="labelDateAbsence">Demande l'autorisation de s'absenter du centre :</label>
+
+                <!-- Boutons radio obligeant un choix de départ -->
+                <label>
+                    <input type="radio" name="periode" value="journee" checked>
+                    Journée
+                </label>
+        
+                <label>
+                    <input type="radio" name="periode" value="periode">
+                    Période
+                </label>
+            </div>
+        </div>
+        <div class="selectionDateAbsence">
+
+            <!-- Calendrier pour la journée -->
+            <div id="calendrierJournee" class="calendrier">
+                <label id="dateJourneeLabel" for="dateJournee">Sélectionner une date :</label>
+                <input type="date" id="dateJournee" name="dateJournee" required>
+
+                <label id="heureDebutJournee" for="heureDebutJournee">Heure de début :</label>
+                <input type="time" id="heureDebutJourneeIn" name="heureDebutJournee" min="08:00" max="17:00" required>
+
+                <label id="heureFinJournee" for="heureFinJournee">Heure de fin :</label>
+                <input type="time" id="heureFinJourneeIn" name="heureFinJournee" required>
+            </div>
+    
+             <!-- Calendrier pour la période -->
+            <div id="calendrierPeriode" class="calendrierPeriode">
+                <label id="dateDebutLabel" for="dateDebut">Début de la période :</label>
+                <input type="date" id="dateDebut" name="dateDebut" required>
+    
+                <label id="dateFinLabel" for="dateFin">Fin de la période :</label>
+                <input type="date" id="dateFin" name="dateFin" required>
+        
+                
+                <!-- Ajout d'un label pour afficher le nombre de jours d'absence -->
+            <label id="joursAbsenceLabel" class="hidden"></label>
+            </div>
+        </div>
+    
+    </header>
+    <main>
+        <section class="motifAbsence">
+            <label id="motifAbsenceTitre" title ="motifAbsence">Pour le motif suivant :</label>
+
+        </section>
+
+        <!-- Setion des signatures -->
+        <section class="signatures" id="signaturesSection" style="display: none;">
+            <div class="cachetSignatureEntreprise">
+                <label id="cachet" for="cachetEntreprise">Cachet et signature de l'entreprise ou de</label>
+                <p id="cachetEntreprise">Merci d'apposer votre cachet pour justifier de</p>
+                <p id="signatureEntreprise">l'absence de la formation de M</p>
+            </div>
+            <div class="blocSignatureStagiaireFormateur">
+                <label id="stagiaire" for="stagiaire">Date et signature du stagiaire</label>
+                <label id="formateur" for="formateur">Date et signature du formateur</label>
+            </div>
+            <div class="decisionMfDirecteur">
+                <label id="avisMf" for="avisMf">Avis du MF pour décision du directeur</label>
+                <label id="avisDirecteur" for="avisDirecteur">Décision du directeur</label>
+            </div>
+
+        </section>
+        <button id="validerButton">Valider</button>
+
+    </main>
+    <!-- script pour PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- script js -->
+    <script src="autorisation.js"></script>
+</body>
+</html>
